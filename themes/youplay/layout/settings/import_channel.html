@@ -1,0 +1,197 @@
+<style>
+   .d-none{
+      display:none;
+   }
+</style>
+<form class="form-horizontal user-setting-panel pt_forms pt_shadow" id="youtube_channel_form" method="POST">
+    <div class="youtube_channel_id-alert"></div>
+   <!-- password input-->
+   <div class="form-group">
+      <label class="col-md-12" for="youtube_channel_id">YouTube Channel URL</label>
+      <div class="col-md-12">
+         <input id="youtube_channel_id" name="youtube_channel_id" type="text" placeholder="" class="form-control input-md">
+      </div>
+   </div>
+   <input type="hidden" name="hash_id" value="<?php echo PT_CreateSession()?>">
+   <input type="hidden" name="user_id" id="user_id" value="{{USER id}}">
+   <!-- Button (Double) -->
+   <div class="youtube_channel_id-last-sett-btn modal-footer" style="margin: 0px -30px -10px -30px;">
+      <button type="button" id="btnRmYoutube" onclick="removeChannel('youtube_channel_id')" class="btn btn-danger  d-none setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG delete}}</button>
+      <button type="button" onclick="addChannel('youtube_channel_id')" class="btn btn-main setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG import}}</button>
+   </div>
+ </form>
+ 
+ <form class="form-horizontal user-setting-panel pt_forms pt_shadow" style="margin-top: 10px;" id="rumble_channel" >
+    <div class="rumble_channel_id-alert"></div>
+   <!-- password input-->
+   <div class="form-group">
+      <label class="col-md-12" for="rumble_channel_id">Rumble Channel URL</label>
+      <div class="col-md-12">
+         <input id="rumble_channel_id" name="rumble_channel_id" type="text" placeholder="" class="form-control input-md">
+      </div>
+   </div>
+   <!-- Button (Double) -->
+   <div class="rumble_channel_id-last-sett-btn modal-footer" style="margin: 0px -30px -10px -30px;">
+      <button type="button" id="btnRmRumble" onclick="removeChannel('rumble_channel_id')" class="btn btn-danger  d-none setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG delete}}</button>
+      <button type="button" onclick="addChannel('rumble_channel_id')" class="btn btn-main setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG import}}</button>
+   </div>
+ </form>
+ <form class="form-horizontal user-setting-panel pt_forms pt_shadow" style="margin-top: 10px;" id="rumble_channel" >
+    <div class="bitchute_channel_id-alert"></div>
+   <!-- password input-->
+   <div class="form-group">
+      <label class="col-md-12" for="bitchute_channel_id">Bitchute Channel URL</label>
+      <div class="col-md-12">
+         <input id="bitchute_channel_id" name="bitchute_channel_id" type="text" placeholder="" class="form-control input-md">
+      </div>
+   </div>
+   <!-- Button (Double) -->
+   <div class="bitchute_channel_id-last-sett-btn modal-footer" style="margin: 0px -30px -10px -30px;">
+      <button type="button" id="btnRmBitChute" onclick="removeChannel('bitchute_channel_id')" class="btn btn-danger  d-none setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG delete}}</button>
+      <button type="button" onclick="addChannel('bitchute_channel_id')" class="btn btn-main setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG import}}</button>
+   </div>
+ </form>
+ 
+ 
+ 
+ <form class="form-horizontal user-setting-panel pt_forms pt_shadow" style="margin-top: 10px;" id="odysee_channel" >
+    <div class="odysee_channel_id-alert"></div>
+    <!-- password input-->
+    <div class="form-group">
+       <label class="col-md-12" for="odysee_channel_id">Odysee Channel URL</label>
+       <div class="col-md-12">
+          <input id="odysee_channel_id" name="odysee_channel_id" type="text" placeholder="" class="form-control input-md">
+       </div>
+    </div>
+    <!-- Button (Double) -->
+    <div class="odysee_channel_id-last-sett-btn modal-footer" style="margin: 0px -30px -10px -30px;">
+      <button type="button" id="btnRmOdysse" onclick="removeChannel('odysee_channel_id')" class="btn btn-danger  d-none setting-panel-mdbtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG delete}}</button>
+      <button type="button" onclick="addChannel('odysee_channel_id')" class="btn btn-main setting-panel-mdbtn mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG import}}</button>
+    </div>
+    
+      
+   
+ </form>
+    
+    
+ 
+ 
+ 
+ <script>
+
+         async function removeChannel(id){
+            swal({
+               title: '{{LANG confirmation}}',
+               text: "{{LANG confirm_delete_ad}}",
+               type: 'warning',
+               showCloseButton: true,
+               showCancelButton: true,
+               focusConfirm: false,
+               confirmButtonText:"<i class='material-icons'>delete</i> {{LANG delete}}!",
+               cancelButtonText:"<i class='fa fa-ban'></i> {{LANG cancel}}",
+               buttonsStyling:false,
+               confirmButtonClass:'btn btn-success margin-right',
+               cancelButtonClass:"btn btn-default",
+               allowOutsideClick:false,
+            }).then(function (){
+               let url = $("#"+id).val()
+               let user_id = $("#user_id").val()
+               let data = {url, user_id} 
+               $.ajax({
+                  url: '{{LINK nodeapp/remove}}',
+                  type: 'POST',
+                  dataType: 'json',
+                  cache: false,
+                  data: data,
+                  success: function (response) {
+                     $("#"+id).val('')
+                     if (url.includes('youtube')){
+                        $("#btnRmYoutube").css('display', 'none')
+                     }
+                     if (url.includes('odysee')){
+                        $("#btnRmOdysee").css('display', 'none')
+                     }
+                     if (url.includes('rumble')){
+                        $("#btnRmRumble").css('display', 'none')
+                     }
+                     if (url.includes('bitchute')){
+                        $("#btnRmBitchute").css('display', 'none')
+                     }
+                     
+                  }
+               })
+            })
+         }
+
+        async function getChannels(){
+            await $.get( "https://ancaptube.com/nodeapp/user/{{USER id}}", function( data ) {
+                if (data.length){
+                    console.log(data)
+                    data.forEach(element => {
+                    if (element.platform == "youtube"){
+                        $("#youtube_channel_id").val(element.url)
+                        $("#btnRmYoutube").removeClass('d-none')
+                    }
+                    if (element.platform == "rumble"){
+                        $("#rumble_channel_id").val(element.url)
+                        $("#btnRmRumble").removeClass('d-none')
+                    }
+                    if (element.platform == "odysee"){
+                        $("#odysee_channel_id").val(element.url)
+                        $("#btnRmOdysse").removeClass('d-none')
+                    }
+                    if (element.platform == "bitchute"){
+                        $("#bitchute_channel_id").val(element.url)
+                        $("#btnRmBitchute").removeClass('d-none')
+                    }
+                    });
+                }
+            });
+        }
+        getChannels()
+    
+       function addChannel(id){
+          let url = $("#"+id).val()
+          let user_id = $("#user_id").val()
+          let data = {url, user_id}
+          $.ajax({
+             url: '{{LINK nodeapp/}}',
+             type: 'POST',
+             dataType: 'json',
+             cache: false,
+             data: data,
+             beforeSend: function() {
+                $('.'+id+'-last-sett-btn').find('button').text("{{LANG please_wait}}");
+             },
+             success: function (response) {
+                console.log(response)
+                //scrollToTop();
+                if (response == "ok") {
+                   $('.'+id+'-alert').append('<div class="alert alert-success">Please wait in a moment your channel will be imported</div>');
+                   $('.alert-success').fadeIn('fast', function() {
+                         $(this).delay(10000).slideUp(500, function() {
+                            $(this).remove();
+                         });
+                   });
+                } else if (response) {
+                   //var errors = response.errors.join("<br>");
+                   $('.'+id+'-alert').append('<div class="alert alert-danger">' + response.message  + '</div>');
+                   $('.alert-danger').fadeIn('fast', function() {
+                         $(this).delay(10000).slideUp(500, function() {
+                            $(this).remove();
+                         });
+                   });
+                }
+                $('.'+id+'-last-sett-btn').remove()
+                //$('.'+id+'-last-sett-btn').find('button').html('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG save}}');
+                //form.find('button').html('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> {{LANG save}}');
+                // FL_progressIconLoader(form.find('button'));
+             },
+             error: function (err) {
+                console.log(err)
+             }
+          });
+       }
+     
+      
+ </script>

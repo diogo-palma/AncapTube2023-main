@@ -1,0 +1,16 @@
+{
+    "db_hostname": "localhost",
+    "db_username": "ancaptube_user",
+    "db_password": "ki7K35HpA7ny7Hit",
+    "db_dbname": "ancaptube_db",
+    "site_url": "https:\/\/ancaptube.com",
+    "server_ip": "135.181.18.103",
+    "server_port": 4545,
+    "amazon": false,
+    "amazon_bucket": "",
+    "nodejs_message_update_interval": 500,
+    "ajax_message_update_interval": 3000,
+    "ssl": false,
+    "ssl_privatekey_full_path": "",
+    "ssl_cert_full_path": ""
+}
